@@ -3,12 +3,13 @@ const MongoClient = require("mongodb").MongoClient;
 
 const dbUrl = 'mongodb://localhost:27017/learning';
 
-class BackEnd {
-    constructor(lang, time) {
-        this.lang = lang;
-        this.time = time
-    }
+MongoClient.connect(dbUrl, (err, db) => {
+    const dbs = db.db('learning');
+    const students = dbs.collection('students');
 
-}
+    // students.updateMany({}, { $set: { rating: [20, 30, 40] } });
+    // students.updateMany({ rating: 20 }, { $set: { "rating.$": 100 } })
+    students.updateMany({ }, { $set: { 'rating.$[]': 50 } })
 
-const 
+    console.log("db succesfully connected")
+})

@@ -1,4 +1,4 @@
-// bulk write di gunakan untuk melakukan banyak perintah/operasi sekaligus
+// bulk write di gunakan untuk melakukan banyak perintah/operasi sekaligus ( cocok untuk memasukkan/menghapus/mengupdate secara banyak)
 
 db.customers.bulkWrite([
     {
