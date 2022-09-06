@@ -1,5 +1,21 @@
+// step to create replica set
+// step 1: mongod --replSet replica-name --dbpath dbpathname --port portNumber
+// setp 2: rs.initiate({ host: "localhost:27017", priority: 2, votes: 1} 
+
 // add new member
 rs.add({ host: "hostnames", priority: 2, votes: 1})
+// remove a member
+// stop the member instance/server
+rs.remove("hostname")
+
+// check status
+rs.status()
+
+// check members configuration
+rs.conf()
+
+// set tags to members
+const cfg = rs.conf().members[0].tags = { "data": "west", usage: "development" }
 
 // reconfig members
 rs.reconfig(configuration)
