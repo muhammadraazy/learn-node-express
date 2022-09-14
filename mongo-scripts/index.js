@@ -1,4 +1,5 @@
 // time-to-live index can be use for remove document from a collection after a certain amount of time specified
+// only works for date types field
 db.eventlog.createIndex( { "lastModifiedDate": 1 }, { expireAfterSeconds: 3600 } )
 
 // working with unique index
