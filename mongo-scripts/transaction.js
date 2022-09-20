@@ -1,3 +1,8 @@
+// TRANSACTIONS ( provides an atimicity on multi-document in a single or multiple collection (atomicity : "all or nothing" )
+// we can create a collection and index on transaction ( read preferrence must be "local" when explicitly create a collection or index)
+// write/read preferrence is on transaction level ( write/read preferrence on collection level are ignored ) 
+
+
 // Setting replication
 rs.initiate(
   {
