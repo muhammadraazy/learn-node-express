@@ -1,6 +1,12 @@
 // use admin database
 // use admin
 
+// built in role
+// dbOwner => combine capability of readWrite, userAdmin, dbAdmin
+// dbAdmin => use to manage database
+// userAdmin => use tomanage user and role
+// readWrite => use to work with operation on database and collections
+
 db.createUser(
     {
         user: "mongo",
