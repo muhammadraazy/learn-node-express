@@ -1,4 +1,10 @@
-// step to create replica set
+// step to create replica set with Authentication
+- start to instance with below command
+- mongod --replSet replicaName --keyFile <keyfile> --dbpath <dbpath> --port <port>
+ - connect to the instance with <mongosh --port port>
+   - then rs.initiate()
+
+// step to create replica set without authentication
 // step 1: mongod --replSet replica-name --dbpath dbpathname --port portNumber
 // setp 2: rs.initiate({ host: "localhost:27017", priority: 2, votes: 1} 
 
