@@ -1,5 +1,5 @@
 // step to create replica set with Authentication
-- start to instance with below command
+- start two instance with below command
 - mongod --replSet replicaName --keyFile <keyfile> --dbpath <dbpath> --port <port>
  - connect to the instance with <mongosh --port port>
    - then rs.initiate()
